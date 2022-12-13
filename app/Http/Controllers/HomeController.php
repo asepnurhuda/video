@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
+use App\Models\Video;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -23,6 +25,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('backend.dashboard.index');
+        $videos = Video::all();
+        $categories = Category::all();
+        return view('backend.dashboard.index', compact('categories', 'videos'));
     }
 }
