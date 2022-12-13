@@ -42,6 +42,7 @@ class CategoryController extends Controller
 
     public function delete($id)
     {
+        Category::find($id)->videos()->detach();
         Category::destroy($id);
         return redirect()->route('category.index');
     }

@@ -60,8 +60,9 @@ class VideoController extends Controller
 
     public function delete($id)
     {
+        Video::findOrFail($id)->categories()->detach();
         Video::destroy($id);
-        return redirect()->route('backend.video.index');
+        return redirect()->route('video.index');
     }
 
     public function update(Request $request, $id)
