@@ -26,10 +26,9 @@
           <label>Pilih Kategori</label>
           <select name="categories[]" class="form-control select2" multiple="multiple">
             @foreach($categories as $category)
-              @if($video->categories->contains($category))
-                <option value="{{ $category->id }}" selected>{{ $category->name }}</option> 
-              @endif
-            <option value="{{ $category->id }}">{{ $category->name }}</option> 
+              
+              <option value="{{ $category->id }}" @if($video->categories->contains($category)) selected="selected" @endif>{{ $category->name }}</option> 
+              
             @endforeach
           </select>
         </div>

@@ -88,7 +88,7 @@ class VideoController extends Controller
             'thumbnail' => $thumbnail,
         ]);
 
-        $video->categories()->attach($categories);
+        $video->categories()->sync($categories);
 
         return redirect()->route('video.index');
     }
