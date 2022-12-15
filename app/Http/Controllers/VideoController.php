@@ -77,7 +77,7 @@ class VideoController extends Controller
                 unlink($path);
             }
             $thumbnail = uniqid() . str_replace(' ', '-', $request->file('thumbnail')->getClientOriginalName());
-            $request->file('thumbnail')->move(public_path('assets/frontend/thumbnail'), $thumbnail);
+            $request->file('thumbnail')->move(public_path('assets/frontend/img'), $thumbnail);
         }
 
         $categories = Category::find($request->categories);
