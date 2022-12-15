@@ -1,5 +1,5 @@
 <!-- Breadcrumb Begin -->
-<div class="breadcrumb-option spad set-bg" data-setbg="{{ asset('assets/frontend/img/testimonial-bg.jpg') }}">
+<div class="breadcrumb-option spad set-bg" data-setbg="{{ asset('assets/frontend/img/burung-bg.jpg') }}">
     <div class="row">
         <div class="col-lg-12 text-center">
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
